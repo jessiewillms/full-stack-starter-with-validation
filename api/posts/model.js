@@ -21,7 +21,7 @@ var PostSchema = new mongoose.Schema({
   },
   image: {
   	type: String,
-  	match: ".jpg",
+  	required: true,
   },
   comment_count: Number,
   user_details: UserSchema
