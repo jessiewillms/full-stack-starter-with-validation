@@ -7,10 +7,10 @@ var Header = React.createClass({
     return  <div>
       <div className={ styles.header } >
         <div className={ styles.brand }>
-          <Link to='/'>Budz Trading Zone</Link>
+          <Link to='/'>New quiz app</Link>
         </div>
         <div className={ styles.actions }>
-          <Link to='/post'>Post new Item</Link>
+          <Link to='/post'>Post new quiz!!</Link>
         </div>
       </div>
 

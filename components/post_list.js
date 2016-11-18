@@ -11,7 +11,7 @@ var PostList = React.createClass({
                 title={ post.title }
                 image={ post.image }
                 description={ post.description }
-                location={ post.location }
+                category={ post.category }
                 user={ post.user } />
         )}
       </div>

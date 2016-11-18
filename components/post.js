@@ -8,7 +8,7 @@ var Post = React.createClass({
       <div className={ styles.post }>
         <div className={ styles.user }>{ this.props.user } posted:</div>
         <div className={ styles.image }><img src={ this.props.image } /></div>
-        <div className={ styles.location }>{ this.props.location }</div>
+        <div className={ styles.category }>{ this.props.category }</div>
         <div className={ styles.title }>{ this.props.title }</div>
         <div className={ styles.description}>{ this.props.description }</div>
         <div className={ styles.actions }>

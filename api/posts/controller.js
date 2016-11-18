@@ -25,7 +25,7 @@ exports.update = function(req, res) {
     .then((post) => {
       post.title = req.body.title;
       post.description = req.body.description;
-      post.location = req.body.location;
+      post.category = req.body.category;
       post.user = req.body.user;
       post.image = req.body.image;
 
@@ -51,7 +51,7 @@ exports.create = function(req, res) {
 
     post.title = req.body.title;
     post.description = req.body.description;
-    post.location = req.body.location;
+    post.category = req.body.category;
     post.user = req.body.user;
     post.image = req.body.image;
 

@@ -12,7 +12,7 @@ var EditPost = React.createClass({
   getInitialState: function() {
     var emptyPost = {
       title: '',
-      location: '',
+      category: '',
       user: '',
       description: '',
       image: ''
@@ -36,7 +36,7 @@ var EditPost = React.createClass({
       <Field label="Title" value={ this.state.post.title } name='title' onChange={ this.updateField } />
       <Field label="Description" value={ this.state.post.description } name='description' onChange={ this.updateField } />
       <Field label="Image URL" value={ this.state.post.image } name='image' onChange={ this.updateField } />
-      <Field label="Location" value={ this.state.post.location } name='location' onChange={ this.updateField } />
+      <Field label="Category" value={ this.state.post.category } name='category' onChange={ this.updateField } />
       <Field label="Your Name" value={ this.state.post.user } name='user' onChange={ this.updateField } />
       <button onClick={ this.save }>Save</button>
     </div>
