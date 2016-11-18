@@ -28,6 +28,7 @@ exports.update = function(req, res) {
       post.category = req.body.category;
       post.user = req.body.user;
       post.image = req.body.image;
+      post.timer = req.body.timer;
 
       post.save().then(() => {
         res.send(post);
@@ -54,6 +55,7 @@ exports.create = function(req, res) {
     post.category = req.body.category;
     post.user = req.body.user;
     post.image = req.body.image;
+    post.timer = req.body.timer;
 
     post.save()
     .then(() => {

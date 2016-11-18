@@ -18,7 +18,7 @@ var PostSchema = new mongoose.Schema({
   },
   category: {
   	type: String,
-  	enum: ['Sports', 'Politics', 'Arts'],
+  	enum: ['Sports', 'Politics', 'Arts', 'Life', 'City'],
   },
   user: {
   	type: String,
@@ -26,6 +26,11 @@ var PostSchema = new mongoose.Schema({
   },
   image: {
   	type: String,
+  },
+  timer: {
+    type: Number,
+    min: 0,
+    max: 30,
   },
   comment_count: Number,
   user_details: UserSchema

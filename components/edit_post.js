@@ -8,6 +8,15 @@ var Field = ({ label, value, onChange, name }) => <div className={ styles.field 
   <input type='text' value={ value } name={ name } onChange={ onChange } />
 </div>
 
+var Select = ({ label, value, onChange, name }) => <select className={ styles.field }>
+  <option type='text' value={ value } name={ name } onChange={ onChange } >{ label }</option>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
+
 var EditPost = React.createClass({
   getInitialState: function() {
     var emptyPost = {
@@ -15,7 +24,8 @@ var EditPost = React.createClass({
       category: '',
       user: '',
       description: '',
-      image: ''
+      image: '',
+      timer: ''
     }
     if (this.props.params.id) {
       var post = this.props.posts.find((post) => post._id == this.props.params.id);
@@ -38,6 +48,10 @@ var EditPost = React.createClass({
       <Field label="Image URL" value={ this.state.post.image } name='image' onChange={ this.updateField } />
       <Field label="Category" value={ this.state.post.category } name='category' onChange={ this.updateField } />
       <Field label="Your Name" value={ this.state.post.user } name='user' onChange={ this.updateField } />
+      <Field label="Timer" value={ this.state.post.timer } name='timer' onChange={ this.updateField } />
+
+      <Select label="Timer" value={ this.state.post.timer } name='timer' onSelectChange={ this.updateField } />
+
       <button onClick={ this.save }>Save</button>
     </div>
   },
@@ -67,6 +81,13 @@ var EditPost = React.createClass({
     var post = this.state.post;
     post[evt.target.name] = evt.target.value;
     this.setState({post: post});
+  },
+  onSelectChange: function(evt){
+    var post = this.state.post;
+    post[evt.target.name] = evt.target.value; // this might need to be different because select menus
+    this.setState({
+      post: post
+    })
   }
 });
 

@@ -11,6 +11,7 @@ var Post = React.createClass({
         <div className={ styles.category }>{ this.props.category }</div>
         <div className={ styles.title }>{ this.props.title }</div>
         <div className={ styles.description}>{ this.props.description }</div>
+        <div className={ styles.timer}>{ this.props.timer }</div>
         <div className={ styles.actions }>
           <Link to={ '/edit/' + this.props.id }>Edit</Link>
         </div>
